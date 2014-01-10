@@ -27,42 +27,39 @@ class PhoneNumber
 		}
 
 		puts find3Word firstThree
-		puts find4Word lastFour
+		#puts find4Word lastFour
 	end
 
 	def find3Word input
-		a = input[0]
-		b = input[1]
-		c = input[2]
-		posible = []
-
-		puts "variable a: " + a.to_s
+		answers = []
 		#start by looping through the whole dictionary
 		@@three_word.each { |dict|
 			#test the first letter
-			a.each { |first|
+			input[0].each { |first|
 				if first == dict[0]
-					posible.push(dict)
+					answers.push(dict)
 				end
 			}
 		}
 
-		# posible now contains all the words
-		# that start with the first number
-		posible.each { |dict|
-			b.each { |second|
-				#start removing instead of adding
-				if second != dict[1]
-					posible
-
+		answers.each { |dict|
+			#delete instead of add
+			input[1].select! { |second|
+				second == dict[1]
 			}
-
 		}
-		if posible.length == 0
+
+		answers.each { |dict|
+			input[2].select! { |third|
+				third == dict[2]
+			}
+		}
+
+		if answers.length == 0
 				puts "Sorry no answers match!"
+		else 
+			return answers
 		end
-		puts "the answers are: " + posible.to_s
-		return posible
 	end
 
 	def find4Word input
