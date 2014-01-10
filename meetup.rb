@@ -57,21 +57,26 @@ class PhoneNumber
 			 	}
 			}
 		when 3
-			#input: all three letter words
-			@@three_word.each { |dict|  
+			#loop input: ['the', 'and', 'why', 'her', 'hfa', 'hld']
+			@@three_word.each { |dict|
+				#loop input ['g','h','i']
 				@@numbers.fetch(input[0]).each { |first|  
 					if first == dict[0]
 						answers.push(dict)
 					end
 				}
 			}
-			#output: three letter words that start with h
+			#loop output: ["her", "hfa", "hld"]
+
+			#loop input: ["her", "hfa", "hld"]
 			answers.select! { |dict|
+				#loop input: ['d','e','f']
 				@@numbers.fetch(input[1]).each { |second|
 				 	second == dict[1]
 				}
 			}
-
+			#loop output: ["her", "hfa", "hld"]
+			
 			answers.each { |dict|
 			 	@@numbers.fetch(input[2]).select! { |third|
 			 		third == dict[2]
