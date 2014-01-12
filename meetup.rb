@@ -21,14 +21,14 @@ class PhoneNumber
 		'6' => '@@six_word',
 		'7' => '@@seven_word'
 	}
-	@@one_word = []
-	@@two_word = []
-	@@three_word = ['the', 'and', 'why', 'her', 'hfa', 'hld']
+	@@one_word = ['a', 'i']
+	@@two_word = ['as', 'yo', 'is', 'to', 'at']
+	@@three_word = ['the', 'and', 'why', 'her', 'ass', 'age', 'thy']
 	#@@three_word = ['abs', 'ace', 'act', 'add', 'ads', 'age', 'ago', 'aid', 'aim', 'air', 'ale', 'amp', 'all', 'and', 'ant', 'any', 'ape', 'arc', 'are', 'ark', 'arm', 'art', 'ash', 'ask', 'ate', 'awe', 'axe', 'bad', 'bag', 'bam', 'ban', 'bar', 'bat', 'bay', 'bed', 'beg', 'bet', 'bib', 'bid', 'big', 'bin', 'bio', 'bit', 'boa', 'bob', 'bog', 'boo', 'bop', 'bot', 'bow', 'box', 'boy', 'bra', 'bud', 'bug', 'bum', 'bun', 'bus', 'but', 'buy', 'bye', 'cab', 'cam', 'can', 'cap', 'car', 'cat', 'chi', 'cob', 'cog', 'con', 'cop', 'cow', 'coy', 'cry', 'cub', 'cue', 'cup', 'cut', 'dab', 'dad', 'day', 'den', 'dew', 'did', 'dib', 'die', 'dig', 'dim', 'din', 'dip', 'dog', 'don', 'dot', 'dry', 'dub', 'due', 'dug', 'duh', 'duo', 'dye', 'ear', 'eat', 'eel', 'egg', 'ego', 'elf', 'elk', 'elm', 'emo', 'end', 'eon', 'era', 'eve', 'eye', 'fab', 'fad', 'fan', 'far', 'fat', 'fed', 'fee', 'few', 'fav', 'fit', 'fix', 'fly', 'foe', 'fog', 'for', 'fox', 'fry', 'fun', 'fur', 'gag', 'gal', 'gap', 'gas', 'gel', 'gem', 'get', 'gig', 'got', 'gum', 'gun', 'gut', 'guy', 'gym', 'gin', 'had', 'ham', 'hat', 'has', 'her', 'hex', 'hey', 'hid', 'him', 'hip', 'his', 'hit', 'hog', 'hop', 'hot', 'how', 'hub', 'hue', 'hug', 'huh', 'hut', 'ice', 'icy', 'ill', 'imp', 'ink', 'inn', 'ion', 'ire', 'ism', 'its', 'jab', 'jam', 'jar', 'jet', 'jig', 'job', 'joy', 'jug', 'keg', 'key', 'kin', 'lab', 'lad', 'lag', 'lap', 'law', 'lay', 'leg', 'let', 'lid', 'lie', 'lip', 'lot', 'lug', 'mac', 'mad', 'mag', 'man', 'map', 'mat', 'max', 'may', 'men', 'met', 'mic', 'mid', 'mix', 'mob', 'mod', 'mom', 'mon', 'mop', 'mud', 'mug', 'nab', 'nag', 'nap', 'net', 'new', 'not', 'now', 'nut', 'oak', 'oar', 'oat', 'odd', 'ode', 'off', 'oil', 'old', 'ole', 'one', 'ore', 'our', 'out', 'own', 'pac', 'pal', 'pan', 'pat', 'paw', 'pay', 'peg', 'pen', 'per', 'pet', 'pic', 'pig', 'pie', 'pin', 'pip', 'pix', 'pod', 'pog', 'pop', 'pot', 'pow', 'pro', 'pub', 'pup', 'put', 'rad', 'rap', 'rat', 'raw', 'ray', 'red', 'rib', 'rig', 'rim', 'rip', 'rot', 'row', 'rub', 'rug', 'rum', 'rut', 'rye', 'sad', 'sat', 'saw', 'say', 'sea', 'see', 'set', 'sew', 'she', 'shy', 'sim', 'sip', 'sir', 'sit', 'six', 'ski', 'sky', 'sly', 'spy', 'sub', 'sup', 'tad', 'tan', 'tap', 'tea', 'ten', 'the', 'tie', 'til', 'tin', 'tip', 'too', 'top', 'tow', 'toy', 'try', 'tub', 'two', 'vet', 'van', 'wag', 'war', 'was', 'wax', 'way', 'web', 'wet', 'who', 'why', 'win', 'won', 'wow', 'yay', 'yea', 'yep', 'yes', 'yet', 'you', 'yum', 'yup', 'zap', 'zen', 'zip'	]
- 	@@four_word = ['next', 'sock']
- 	@@five_word = []
- 	@@six_word = []
- 	@@seven_word = []
+ 	@@four_word = ['next', 'sock', 'lump', 'star', 'nuts']
+ 	@@five_word = ['stars', 'timer']
+ 	@@six_word = ['wishes', 'timers']
+ 	@@seven_word = ['hammers', 'wickers']
 
 	def search(number, input)
 		answers = []
@@ -82,10 +82,25 @@ class PhoneNumber
 			 		third == dict[2]
 			 	}
 			}
+		when 4
+			#totally copying logic from above.
+			#['test', 'four', 'bean']
+			@@four_word.each { |dict|
+				#compare first phone number digit(and related letters) to dictioanry.  return Answers array with matches
+				@@numbers.fetch(input[0]).each { |first|  
+					if first == dict[0]
+						answers.push(dict)
+					end
+				}
+			}
+
+			puts "Four letter answers: " + answers.inspect.to_s
 			
 		else
 			puts "error with switch statement"
 		end
+
+		#puts answers
 		return answers
 	end 
 
@@ -158,11 +173,27 @@ class PhoneNumber
 	end
 end
 
-example = PhoneNumber.new
+#example = PhoneNumber.new
 #example.translatePhoneNum "4326398"
-example.search 3,"4326398"
+#example.search 4,"6398222"
 # Examples:
 # ---------
+#1 letter
+# a == 243-6753
+# u == 844-1099
+
+#2 letters
+# as == 271-9232
+# to == 865-1344
+
+#3 letters
 # the-next == 843-6398
 # new-sock == 639-7625
+
+#4 letters
+# the-next == 843-6398
+# new-sock == 639-7625
+# next == 639-8222
+# sock == 762-5222
+
 
