@@ -1,20 +1,20 @@
 Phone Moniker
 =============
 
- Purpose
- -------
+Purpose
+-------
  Generate text options for 1-800 numbers
 
- Usage
- -----
+Usage
+-----
  *Super Simple rb file for now.
  	'ruby meetup.rb'
 
  *Test Specs:
  	'rspec meetup_spec.rb'
 
- To-do
- -----
+To-do
+-----
  	*correct test logic.
  	*complete word finding capabilities for 1 through 7 numbers
  	*wrap in rails
