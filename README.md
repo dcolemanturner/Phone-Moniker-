@@ -25,10 +25,10 @@ To run the tests:
 
 To-do
 -----
-*correct test logic.
-*complete word finding capabilities for 1 through 7 numbers
-*wrap in rails
-*make pretty with front end magic
-*host
-*deploy
-*cash money
+* correct test logic.
+* complete word finding capabilities for 1 through 7 numbers
+* wrap in rails
+* make pretty with front end magic
+* host
+* deploy
+* cash money
