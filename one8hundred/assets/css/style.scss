@@ -1,9 +1,10 @@
 /* Write your CSS! */
-$flip-width: 150px;
+$flip-width: 100px;
 $flip-font-size: 9em;
 
 html {
   height: 100%;
+
 }
 
 form{
@@ -11,9 +12,15 @@ form{
   display: block;
   margin: 25px auto;
   padding: 5px; 
+
+  h2{
+  	display: inline-block;
+  	font-size: 10em;
+  }
 }
 .flip-num{
   position: relative;
+  font-family: 'Oswald', sans-serif;
   margin: 10px;
   margin-right: 0px;
   width: $flip-width;
@@ -52,6 +59,8 @@ form{
 
 .flip-num input{
 	position: relative;
+	font-family: 'Arvo', serif;
+	font-weight: 700;
 	font-size: $flip-font-size;
 	width: $flip-width - 4px;
 	text-align: center;
