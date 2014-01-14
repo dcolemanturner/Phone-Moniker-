@@ -1,5 +1,8 @@
 $(document).ready(function(){
-  
-  // Write your Javascript!
-
+  var flipnum = $(".flip-num");
+  //flipnum.val(0);
+  //$(".flip-num").
+  flipnum.find(".up").on("click", function(){
+  	flipnum.find("input").valueAsNumber();
+  });
 });
