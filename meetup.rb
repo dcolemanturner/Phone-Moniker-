@@ -30,29 +30,21 @@ class PhoneNumber
  	@@six_word = ['wishes', 'timers']
  	@@seven_word = ['hammers', 'wickers']
 
-	def search(number, input)
+	def search(number_to_match, phone_number)
 		answers = []
 
 		#puts input
-		case number
+		case number_to_match
 		when 1
 			@@one_word.each { |dict|  
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
 		when 2
 			@@two_word.each { |dict|  
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
 			answers.each { |dict|
-			 	@@numbers.fetch(input[1]).select! { |second|
+			 	@@numbers.fetch(phone_number[1]).select! { |second|
 			 		second == dict[1]
 			 	}
 			}
@@ -60,25 +52,21 @@ class PhoneNumber
 			#loop input: ['the', 'and', 'why', 'her', 'hfa', 'hld']
 			@@three_word.each { |dict|
 				#loop input ['g','h','i']
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dictend
 			}
 			#loop output: ["her", "hfa", "hld"]
 
 			#loop input: ["her", "hfa", "hld"]
 			answers.select! { |dict|
 				#loop input: ['d','e','f']
-				@@numbers.fetch(input[1]).each { |second|
+				@@numbers.fetch(phone_number[1]).each { |second|
 				 	second == dict[1]
 				}
 			}
 			#loop output: ["her", "hfa", "hld"]
 			
 			answers.each { |dict|
-			 	@@numbers.fetch(input[2]).select! { |third|
+			 	@@numbers.fetch(phone_number[2]).select! { |third|
 			 		third == dict[2]
 			 	}
 			}
@@ -87,11 +75,7 @@ class PhoneNumber
 			#['test', 'four', 'bean']
 			@@four_word.each { |dict|
 				#compare first phone number digit(and related letters) to dictioanry.  return Answers array with matches
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
 
 			puts "Four letter answers: " + answers.inspect.to_s
@@ -103,6 +87,19 @@ class PhoneNumber
 		#puts answers
 		return answers
 	end 
+
+	def dictionaryFirstWordMatch digit, word
+		#input single digit(string), Lookup global number list. Validate first word , output array with valid word
+		answers =[]
+
+		@@numbers.fetch(digit).each { |first|  
+			if first == word[0]
+				answers.push(word)
+			end
+		}
+		return answers
+
+	end
 
 
 	def translatePhoneNum (phone_raw)

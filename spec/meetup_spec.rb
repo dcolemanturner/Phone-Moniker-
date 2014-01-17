@@ -6,6 +6,29 @@ describe  PhoneNumber  do
     	@phonenum = PhoneNumber.new
 	end
 
+	describe "#dictionaryFirstWordMatch" do
+		it "should return an array" do
+			answer = @phonenum.dictionaryFirstWordMatch '2', 'and'
+			answer.should be_kind_of(Array)
+		end
+		it "should return valid A, B. C words when querying 2" do
+			answer = @phonenum.dictionaryFirstWordMatch '2', 'and'
+			answer += @phonenum.dictionaryFirstWordMatch '2', 'bun'
+			answer += @phonenum.dictionaryFirstWordMatch '2', 'cat'
+			answer += @phonenum.dictionaryFirstWordMatch '2', 'not'
+			answer.should include("and", "bun", "cat")
+			answer.should_not include("not")
+		end
+		it "should return valid D, E, F words when querying 3" do
+			answer = @phonenum.dictionaryFirstWordMatch '3', 'den'
+			answer += @phonenum.dictionaryFirstWordMatch '3', 'eat'
+			answer += @phonenum.dictionaryFirstWordMatch '3', 'fat'
+			answer += @phonenum.dictionaryFirstWordMatch '3', 'not'
+			answer.should include("den", "eat", "fat")
+			answer.should_not include("not")
+		end
+	end
+
 	describe "#search" do
 		it "should return a valid 1 letter word when searching for 1 digits" do
 			answer = @phonenum.search 1, '2436774'
@@ -33,19 +56,6 @@ describe  PhoneNumber  do
 			answer.should_not include("sock")
 			answer.should_not include("nuts")
 		end
-=begin
-		it "should NOT return a valid 4 letter word when searching for 3 digits" do
-			answer = @phonenum.search 3, '8436398'
-			#replace with length based function
-			#answer.should_not include("next")
-		end
-
-		it "should NOT return a valid 3 letter word when searching for 4 digits" do
-			answer = @phonenum.search 4, '8436398'
-			#replace with length based function
-			#answer.should_not include("the")
-		end
-=end
 	end
 
 end

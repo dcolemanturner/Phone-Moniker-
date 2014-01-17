@@ -18,6 +18,7 @@ Testing
 -------
 
 To run the tests:
+	$ gem install rspec
 
     $ rspec meetup_spec.rb
 
