@@ -43,10 +43,16 @@ class PhoneNumber
 			@@two_word.each { |dict|  
 				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
-			answers.each { |dict|
-			 	@@numbers.fetch(phone_number[1]).select! { |second|
-			 		second == dict[1]
-			 	}
+			#loop through introductory array
+			answers.each { |answer|
+				isRemovable = true
+
+				@@numbers.fetch(phone_number[1]).each do |phone_character|
+					answer[1] == phone_character ? isRemovable = false : self
+				end
+
+				#remove from answers array if not found
+				isRemovable == true ? answers.delete(answer) : self
 			}
 		when 3
 			#loop input: ['the', 'and', 'why', 'her', 'hfa', 'hld']
@@ -98,7 +104,6 @@ class PhoneNumber
 			end
 		}
 		return answers
-
 	end
 
 
