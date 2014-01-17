@@ -18,6 +18,7 @@ Testing
 -------
 
 To run the tests:
+	$ gem install rspec
 
     $ rspec meetup_spec.rb
 
@@ -25,8 +26,8 @@ To run the tests:
 
 To-do
 -----
-* correct test logic.
-* complete word finding capabilities for 1 through 7 numbers
+* correct test logic. - DONE
+* complete word finding capabilities for 1 through 7 numbers - DONE
 * wrap in rails
 * make pretty with front end magic
 * host

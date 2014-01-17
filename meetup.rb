@@ -26,83 +26,89 @@ class PhoneNumber
 	@@three_word = ['the', 'and', 'why', 'her', 'ass', 'age', 'thy']
 	#@@three_word = ['abs', 'ace', 'act', 'add', 'ads', 'age', 'ago', 'aid', 'aim', 'air', 'ale', 'amp', 'all', 'and', 'ant', 'any', 'ape', 'arc', 'are', 'ark', 'arm', 'art', 'ash', 'ask', 'ate', 'awe', 'axe', 'bad', 'bag', 'bam', 'ban', 'bar', 'bat', 'bay', 'bed', 'beg', 'bet', 'bib', 'bid', 'big', 'bin', 'bio', 'bit', 'boa', 'bob', 'bog', 'boo', 'bop', 'bot', 'bow', 'box', 'boy', 'bra', 'bud', 'bug', 'bum', 'bun', 'bus', 'but', 'buy', 'bye', 'cab', 'cam', 'can', 'cap', 'car', 'cat', 'chi', 'cob', 'cog', 'con', 'cop', 'cow', 'coy', 'cry', 'cub', 'cue', 'cup', 'cut', 'dab', 'dad', 'day', 'den', 'dew', 'did', 'dib', 'die', 'dig', 'dim', 'din', 'dip', 'dog', 'don', 'dot', 'dry', 'dub', 'due', 'dug', 'duh', 'duo', 'dye', 'ear', 'eat', 'eel', 'egg', 'ego', 'elf', 'elk', 'elm', 'emo', 'end', 'eon', 'era', 'eve', 'eye', 'fab', 'fad', 'fan', 'far', 'fat', 'fed', 'fee', 'few', 'fav', 'fit', 'fix', 'fly', 'foe', 'fog', 'for', 'fox', 'fry', 'fun', 'fur', 'gag', 'gal', 'gap', 'gas', 'gel', 'gem', 'get', 'gig', 'got', 'gum', 'gun', 'gut', 'guy', 'gym', 'gin', 'had', 'ham', 'hat', 'has', 'her', 'hex', 'hey', 'hid', 'him', 'hip', 'his', 'hit', 'hog', 'hop', 'hot', 'how', 'hub', 'hue', 'hug', 'huh', 'hut', 'ice', 'icy', 'ill', 'imp', 'ink', 'inn', 'ion', 'ire', 'ism', 'its', 'jab', 'jam', 'jar', 'jet', 'jig', 'job', 'joy', 'jug', 'keg', 'key', 'kin', 'lab', 'lad', 'lag', 'lap', 'law', 'lay', 'leg', 'let', 'lid', 'lie', 'lip', 'lot', 'lug', 'mac', 'mad', 'mag', 'man', 'map', 'mat', 'max', 'may', 'men', 'met', 'mic', 'mid', 'mix', 'mob', 'mod', 'mom', 'mon', 'mop', 'mud', 'mug', 'nab', 'nag', 'nap', 'net', 'new', 'not', 'now', 'nut', 'oak', 'oar', 'oat', 'odd', 'ode', 'off', 'oil', 'old', 'ole', 'one', 'ore', 'our', 'out', 'own', 'pac', 'pal', 'pan', 'pat', 'paw', 'pay', 'peg', 'pen', 'per', 'pet', 'pic', 'pig', 'pie', 'pin', 'pip', 'pix', 'pod', 'pog', 'pop', 'pot', 'pow', 'pro', 'pub', 'pup', 'put', 'rad', 'rap', 'rat', 'raw', 'ray', 'red', 'rib', 'rig', 'rim', 'rip', 'rot', 'row', 'rub', 'rug', 'rum', 'rut', 'rye', 'sad', 'sat', 'saw', 'say', 'sea', 'see', 'set', 'sew', 'she', 'shy', 'sim', 'sip', 'sir', 'sit', 'six', 'ski', 'sky', 'sly', 'spy', 'sub', 'sup', 'tad', 'tan', 'tap', 'tea', 'ten', 'the', 'tie', 'til', 'tin', 'tip', 'too', 'top', 'tow', 'toy', 'try', 'tub', 'two', 'vet', 'van', 'wag', 'war', 'was', 'wax', 'way', 'web', 'wet', 'who', 'why', 'win', 'won', 'wow', 'yay', 'yea', 'yep', 'yes', 'yet', 'you', 'yum', 'yup', 'zap', 'zen', 'zip'	]
  	@@four_word = ['next', 'sock', 'lump', 'star', 'nuts']
- 	@@five_word = ['stars', 'timer']
- 	@@six_word = ['wishes', 'timers']
- 	@@seven_word = ['hammers', 'wickers']
+ 	@@five_word = ['stars', 'timer', 'beats', 'socks', 'nutty', 'beaty']
+ 	@@six_word = ['wishes', 'timers', 'washes', 'greets']
+ 	@@seven_word = ['hammers', 'wickers', 'generic', 'genetic', 'improve']
 
-	def search(number, input)
+	def search(number_to_match, phone_number)
 		answers = []
 
-		#puts input
-		case number
+		#Load initial answers dictionary
+		case number_to_match
 		when 1
 			@@one_word.each { |dict|  
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
 		when 2
 			@@two_word.each { |dict|  
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
-			answers.each { |dict|
-			 	@@numbers.fetch(input[1]).select! { |second|
-			 		second == dict[1]
-			 	}
-			}
+
 		when 3
-			#loop input: ['the', 'and', 'why', 'her', 'hfa', 'hld']
 			@@three_word.each { |dict|
-				#loop input ['g','h','i']
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
-			#loop output: ["her", "hfa", "hld"]
 
-			#loop input: ["her", "hfa", "hld"]
-			answers.select! { |dict|
-				#loop input: ['d','e','f']
-				@@numbers.fetch(input[1]).each { |second|
-				 	second == dict[1]
-				}
-			}
-			#loop output: ["her", "hfa", "hld"]
-			
-			answers.each { |dict|
-			 	@@numbers.fetch(input[2]).select! { |third|
-			 		third == dict[2]
-			 	}
-			}
 		when 4
-			#totally copying logic from above.
-			#['test', 'four', 'bean']
 			@@four_word.each { |dict|
-				#compare first phone number digit(and related letters) to dictioanry.  return Answers array with matches
-				@@numbers.fetch(input[0]).each { |first|  
-					if first == dict[0]
-						answers.push(dict)
-					end
-				}
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
 
-			puts "Four letter answers: " + answers.inspect.to_s
-			
+		when 5
+			@@five_word.each { |dict|
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+			}
+		
+		when 6
+			@@six_word.each { |dict|
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+			}
+
+		when 7
+			@@seven_word.each { |dict|
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+			}
+
 		else
 			puts "error with switch statement"
 		end
+			#dictionary is loaded.  Find next matches
+			dictionaryNextMatch answers, phone_number, number_to_match
 
-		#puts answers
 		return answers
 	end 
+
+	def dictionaryFirstWordMatch digit, word
+		#input single digit(string), Lookup global number list. Validate first word , output array with valid word
+		answers =[]
+
+		@@numbers.fetch(digit).each { |first|  
+			if first == word[0]
+				answers.push(word)
+			end
+		}
+		return answers
+	end
+
+	def dictionaryNextMatch answers, phone_number, numbers_to_match
+		#Input array of valid answers,  validate the 2nd -> 7th characters, if no match, remove the answer from the answers arrray
+		
+		numbers_to_match.downto(2) { |number|
+			#first character has been identified already.  Start at 2.  .  Then removing one digit for array safety
+			number -= 1
+
+			answers.each { |answer|
+				isRemovable = true
+
+				@@numbers.fetch(phone_number[number]).each do |phone_character|
+					answer[number] == phone_character ? isRemovable = false : self
+				end
+
+				#remove from answers array if not found
+				isRemovable == true ? answers.delete(answer) : self
+			}
+		}
+	end
 
 
 	def translatePhoneNum (phone_raw)
