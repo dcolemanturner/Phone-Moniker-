@@ -43,52 +43,22 @@ class PhoneNumber
 			@@two_word.each { |dict|  
 				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
-			#loop through introductory array
-			answers.each { |answer|
-				isRemovable = true
 
-				@@numbers.fetch(phone_number[1]).each do |phone_character|
-					answer[1] == phone_character ? isRemovable = false : self
-				end
-
-				#remove from answers array if not found
-				isRemovable == true ? answers.delete(answer) : self
-			}
 		when 3
-			#loop input: ['the', 'and', 'why', 'her', 'hfa', 'hld']
 			@@three_word.each { |dict|
-				#loop input ['g','h','i']
-				answers += dictionaryFirstWordMatch  phone_number[0], dictend
-			}
-			#loop output: ["her", "hfa", "hld"]
-
-			#loop input: ["her", "hfa", "hld"]
-			answers.select! { |dict|
-				#loop input: ['d','e','f']
-				@@numbers.fetch(phone_number[1]).each { |second|
-				 	second == dict[1]
-				}
-			}
-			#loop output: ["her", "hfa", "hld"]
-			
-			answers.each { |dict|
-			 	@@numbers.fetch(phone_number[2]).select! { |third|
-			 		third == dict[2]
-			 	}
-			}
-		when 4
-			#totally copying logic from above.
-			#['test', 'four', 'bean']
-			@@four_word.each { |dict|
-				#compare first phone number digit(and related letters) to dictioanry.  return Answers array with matches
 				answers += dictionaryFirstWordMatch  phone_number[0], dict
 			}
 
-			puts "Four letter answers: " + answers.inspect.to_s
-			
+		when 4
+			@@four_word.each { |dict|
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+			}
+		
 		else
 			puts "error with switch statement"
 		end
+
+			dictionaryNextMatch answers, phone_number, number_to_match
 
 		#puts answers
 		return answers
@@ -104,6 +74,26 @@ class PhoneNumber
 			end
 		}
 		return answers
+	end
+
+	def dictionaryNextMatch answers, phone_number, numbers_to_match
+		#Input array of valid answers,  validate the 2nd -> 7th characters, if no match, remove the answer from the answers arrray
+		
+		numbers_to_match.downto(2) { |number|
+			#first character has been identified already.  Start at 2.  .  Then removing one digit for array safety
+			number -= 1
+
+			answers.each { |answer|
+				isRemovable = true
+
+				@@numbers.fetch(phone_number[number]).each do |phone_character|
+					answer[number] == phone_character ? isRemovable = false : self
+				end
+
+				#remove from answers array if not found
+				isRemovable == true ? answers.delete(answer) : self
+			}
+		}
 	end
 
 
