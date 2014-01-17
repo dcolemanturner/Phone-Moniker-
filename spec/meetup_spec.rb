@@ -56,6 +56,27 @@ describe  PhoneNumber  do
 			answer.should_not include("sock")
 			answer.should_not include("nuts")
 		end
+
+		it "should return a valid 5 letter word when searching for 5 digits" do
+			answer = @phonenum.search 5, '2328767'
+			answer.should include("beats")
+			answer.should_not include("socks")
+			answer.should_not include("beaty")
+		end
+
+		it "should return a valid 6 letter word when searching for 6 digits" do
+			answer = @phonenum.search 6, '9474379'
+			answer.should include("wishes")
+			answer.should_not include("washes")
+			answer.should_not include("greets")
+		end
+
+		it "should return a valid 7 letter word when searching for 7 digits" do
+			answer = @phonenum.search 7, '9474379'
+			answer.should include("generic")
+			answer.should_not include("genetic")
+			answer.should_not include("improve")
+		end
 	end
 
 end
