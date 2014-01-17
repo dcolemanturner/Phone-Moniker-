@@ -72,7 +72,7 @@ describe  PhoneNumber  do
 		end
 
 		it "should return a valid 7 letter word when searching for 7 digits" do
-			answer = @phonenum.search 7, '9474379'
+			answer = @phonenum.search 7, '4363742'
 			answer.should include("generic")
 			answer.should_not include("genetic")
 			answer.should_not include("improve")
