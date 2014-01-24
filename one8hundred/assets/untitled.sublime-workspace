@@ -1,0 +1,565 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"this",
+				"thisInput"
+			],
+			[
+				"flip",
+				"flipnum"
+			],
+			[
+				"value",
+				"valueAsNumber"
+			],
+			[
+				"fli",
+				"flip-font-size"
+			],
+			[
+				"border",
+				"border"
+			],
+			[
+				"attr",
+				"attribute"
+			],
+			[
+				"num",
+				"numbers"
+			],
+			[
+				"two",
+				"two_word"
+			],
+			[
+				"one",
+				"one_word"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"d",
+				"d"
+			],
+			[
+				"tra",
+				"translatePhoneNum"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"paddi",
+				"padding-bottom"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"spa",
+				"span-columns"
+			],
+			[
+				"rb",
+				"rgba"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"borde",
+				"border-radius"
+			],
+			[
+				"ps",
+				"pos:a	position:absolute"
+			],
+			[
+				"ma",
+				"margin-bottom"
+			],
+			[
+				"span",
+				"span-columns"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"list-s",
+				"list-style-type"
+			],
+			[
+				"pading",
+				"padding-top"
+			],
+			[
+				"default",
+				"default-font-size"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"lower",
+				"lower-alpha"
+			],
+			[
+				"list",
+				"list-style-type"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"scroll",
+				"scrollTop"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"margi",
+				"margin"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"rbg",
+				"rgba()"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"read",
+				"readline"
+			],
+			[
+				"getc",
+				"getchar"
+			],
+			[
+				"EXIT",
+				"EXIT_SUCCESS"
+			],
+			[
+				"char",
+				"charsRead"
+			],
+			[
+				"byt",
+				"bytesRead"
+			],
+			[
+				"log",
+				"logfile"
+			],
+			[
+				"wait",
+				"wait"
+			],
+			[
+				"EX",
+				"EXIT_SUCCESS"
+			],
+			[
+				"Exit",
+				"EXIT_SUCCESS"
+			],
+			[
+				"Exi",
+				"EXIT_FAILURE"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"writ",
+				"write"
+			],
+			[
+				"write",
+				"writeMessage"
+			],
+			[
+				"pie",
+				"pipefd"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"te",
+				"text-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 364.0,
+		"selected_items":
+		[
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"project",
+				"Project: Add Folder"
+			],
+			[
+				"ad",
+				"Project: Add Folder"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 423.0
+	},
+	"console":
+	{
+		"height": 137.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jailbot/Downloads/Phone-Moniker--master/meetup.rb",
+		"/Users/jailbot/Documents/ruby/one8hundred/includes/_header.html",
+		"/Users/jailbot/Documents/ruby/one8hundred/Build/assets/js/app.js",
+		"/Users/jailbot/Documents/ruby/one8hundred/Build/assets/css/style.css",
+		"/Users/jailbot/Documents/websites/portfolio2/includes/_nav.html",
+		"/Users/jailbot/Documents/ruby/meetup.rb",
+		"/Users/jailbot/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/jailbot/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/jailbot/Documents/Green Mountain Painting/includes/_header.html",
+		"/Users/jailbot/Documents/Green Mountain Painting/assets/js/app.js",
+		"/Users/jailbot/Documents/Green Mountain Painting/index.html",
+		"/Users/jailbot/Documents/Green Mountain Painting/includes/_nav.html",
+		"/Users/jailbot/Documents/Project_Default/assets/css/style.scss",
+		"/Users/jailbot/Documents/portfolio2/index.html",
+		"/Users/jailbot/Documents/portfolio2/assets/css/style.scss",
+		"/Users/jailbot/Documents/portfolio2/assets/js/app.js",
+		"/Users/jailbot/Documents/portfolio2/includes/_header.html",
+		"/Users/jailbot/Documents/portfolio2/includes/_nav.html",
+		"/Users/jailbot/Pictures/pron/stupidshit.txt",
+		"/Users/jailbot/Documents/holidays-deer/assets/css/style.scss",
+		"/Users/jailbot/Documents/holidays-deer/index.html",
+		"/Users/jailbot/Documents/portfolio/assets/js/app.js",
+		"/Users/jailbot/Documents/portfolio/assets/css/style.scss",
+		"/Users/jailbot/Documents/portfolio/index.html",
+		"/Users/jailbot/Documents/portfolio/includes/_header.html",
+		"/Users/jailbot/Documents/portfolio/assets/css/style.css",
+		"/Users/jailbot/Documents/portfolio/includes/_nav.html",
+		"/Users/jailbot/Documents/test project/css/partials/_typography.scss",
+		"/Users/jailbot/Documents/test project/index.html",
+		"/Users/jailbot/Documents/test project/partials/structure/_navigation.html",
+		"/Users/jailbot/Documents/test project/README.md",
+		"/Users/jailbot/Desktop/portfolio/index.html",
+		"/Users/jailbot/Desktop/cs311/chapter7.md",
+		"/Users/jailbot/Desktop/cs305/final.txt",
+		"/Users/jailbot/Desktop/cs306/labs/lab4/showip.c",
+		"/Users/jailbot/Desktop/cs306/labs/lab4/lab4-server.c",
+		"/Users/jailbot/Desktop/cs306/labs/lab4/lab4-client.c",
+		"/Users/jailbot/Desktop/cs306/labs/lab4/example.c",
+		"/Users/jailbot/Desktop/cs306/labs/lab1.c",
+		"/Users/jailbot/Desktop/cs306/lab3.c",
+		"/Users/jailbot/Desktop/green mountain painting/index.html",
+		"/Users/jailbot/Desktop/mobastar/asimplesite.html",
+		"/Users/jailbot/Desktop/mobastar/radient.txt",
+		"/Users/jailbot/Desktop/cs306/test2_study.txt",
+		"/Users/jailbot/Desktop/cs306/labs/lab2.c",
+		"/Users/jailbot/Desktop/sbcl/test.lisp",
+		"/Users/jailbot/Desktop/lisp.md",
+		"/Users/jailbot/Desktop/gifstub/gifstub.md",
+		"/Users/jailbot/Desktop/green mountain painting/questions.md",
+		"/Users/jailbot/Desktop/cs306/readline.c",
+		"/Users/jailbot/Desktop/cs306/lab1.c",
+		"/Users/jailbot/Desktop/cs306/example.c",
+		"/Users/jailbot/Desktop/cs306/sample.txt",
+		"/Users/jailbot/Desktop/cs306/lab2.c",
+		"/Users/jailbot/Desktop/lab3.c",
+		"/Users/jailbot/Desktop/sample.txt",
+		"/Users/jailbot/Desktop/example.c",
+		"/Users/jailbot/Desktop/digitalocean.txt",
+		"/Users/jailbot/Desktop/asimplesite.html",
+		"/Users/jailbot/Desktop/lab2.c",
+		"/Users/jailbot/Desktop/lab1.c",
+		"/Volumes/NO NAME/notes/CS306TestNotes"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"'>\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/portfolio2/index.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 151.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
