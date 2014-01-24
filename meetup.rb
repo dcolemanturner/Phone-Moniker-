@@ -30,6 +30,7 @@ class PhoneNumber
  	@@six_word = ['wishes', 'timers', 'washes', 'greets']
  	@@seven_word = ['hammers', 'wickers', 'generic', 'genetic', 'improve']
 
+<<<<<<< HEAD
 	def search(amount, phone_number)
 		answers = []
 
@@ -38,41 +39,76 @@ class PhoneNumber
 		when 1
 			@@one_word.each { |dict|  
 				answers += match_first_letter  phone_number[0], dict
+=======
+	def search(number_to_match, phone_number)
+		answers = []
+
+		#Load initial answers dictionary
+		case number_to_match
+		when 1
+			@@one_word.each { |dict|  
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 			}
 			#search 6 letters
 		when 2
 			@@two_word.each { |dict|  
+<<<<<<< HEAD
 				answers += match_first_letter  phone_number[0], dict
+=======
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 			}
 
 		when 3
 			@@three_word.each { |dict|
+<<<<<<< HEAD
 				answers += match_first_letter  phone_number[0], dict
+=======
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 			}
 
 		when 4
 			@@four_word.each { |dict|
+<<<<<<< HEAD
 				answers = match_letter phone_number[0], 0, dict
+=======
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 			}
 
 		when 5
 			@@five_word.each { |dict|
+<<<<<<< HEAD
 				answers += match_first_letter  phone_number[0], dict			
+=======
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 			}
 		
 		when 6
 			@@six_word.each { |dict|
+<<<<<<< HEAD
 				answers += match_first_letter  phone_number[0], dict
+=======
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 			}
 
 		when 7
 			@@seven_word.each { |dict|
+<<<<<<< HEAD
 				answers += match_first_letter  phone_number[0], dict
+=======
+				answers += dictionaryFirstWordMatch  phone_number[0], dict
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 			}
 
 		else
 			puts "error with switch statement"
 		end
+<<<<<<< HEAD
 			#dictionaryNextMatch answers, phone_number, amount
 			#puts answers.to_s
 		return answers
@@ -96,6 +132,46 @@ class PhoneNumber
 		puts answers.to_s
 		return answers
 	end
+=======
+			#dictionary is loaded.  Find next matches
+			dictionaryNextMatch answers, phone_number, number_to_match
+
+		return answers
+	end 
+
+	def dictionaryFirstWordMatch digit, word
+		#input single digit(string), Lookup global number list. Validate first word , output array with valid word
+		answers =[]
+
+		@@numbers.fetch(digit).each { |first|  
+			if first == word[0]
+				answers.push(word)
+			end
+		}
+		return answers
+	end
+
+	def dictionaryNextMatch answers, phone_number, numbers_to_match
+		#Input array of valid answers,  validate the 2nd -> 7th characters, if no match, remove the answer from the answers arrray
+		
+		numbers_to_match.downto(2) { |number|
+			#first character has been identified already.  Start at 2.  .  Then removing one digit for array safety
+			number -= 1
+
+			answers.each { |answer|
+				isRemovable = true
+
+				@@numbers.fetch(phone_number[number]).each do |phone_character|
+					answer[number] == phone_character ? isRemovable = false : self
+				end
+
+				#remove from answers array if not found
+				isRemovable == true ? answers.delete(answer) : self
+			}
+		}
+	end
+
+>>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
 
 	def match_first_letter digit, word
 		answers = []
