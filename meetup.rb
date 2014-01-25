@@ -30,182 +30,83 @@ class PhoneNumber
  	@@six_word = ['wishes', 'timers', 'washes', 'greets']
  	@@seven_word = ['hammers', 'wickers', 'generic', 'genetic', 'improve']
 
-<<<<<<< HEAD
 	def search(amount, phone_number)
 		answers = []
 
 		#Load initial answers dictionary
 		case amount
 		when 1
-			@@one_word.each { |dict|  
-				answers += match_first_letter  phone_number[0], dict
-=======
-	def search(number_to_match, phone_number)
-		answers = []
+			answers = match_letters phone_number, @@one_word, 0
 
-		#Load initial answers dictionary
-		case number_to_match
-		when 1
-			@@one_word.each { |dict|  
-				answers += dictionaryFirstWordMatch  phone_number[0], dict
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-			}
-			#search 6 letters
 		when 2
-			@@two_word.each { |dict|  
-<<<<<<< HEAD
-				answers += match_first_letter  phone_number[0], dict
-=======
-				answers += dictionaryFirstWordMatch  phone_number[0], dict
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-			}
+			answers = match_letters phone_number, @@two_word, 0
+			answers = match_letters phone_number, answers, 1
 
 		when 3
-			@@three_word.each { |dict|
-<<<<<<< HEAD
-				answers += match_first_letter  phone_number[0], dict
-=======
-				answers += dictionaryFirstWordMatch  phone_number[0], dict
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-			}
+			answers = match_letters phone_number, @@three_word, 0
+			answers = match_letters phone_number, answers, 1
+			answers = match_letters phone_number, answers, 2
 
 		when 4
-			@@four_word.each { |dict|
-<<<<<<< HEAD
-				answers = match_letter phone_number[0], 0, dict
-=======
-				answers += dictionaryFirstWordMatch  phone_number[0], dict
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-			}
+			answers = match_letters phone_number, @@four_word, 0
+			answers = match_letters phone_number, answers, 1
+			answers = match_letters phone_number, answers, 2
+			answers = match_letters phone_number, answers, 3
 
 		when 5
-			@@five_word.each { |dict|
-<<<<<<< HEAD
-				answers += match_first_letter  phone_number[0], dict			
-=======
-				answers += dictionaryFirstWordMatch  phone_number[0], dict
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-			}
+			answers = match_letters phone_number, @@five_word, 0
+			answers = match_letters phone_number, answers, 1
+			answers = match_letters phone_number, answers, 2
+			answers = match_letters phone_number, answers, 3
+			answers = match_letters phone_number, answers, 4
 		
 		when 6
-			@@six_word.each { |dict|
-<<<<<<< HEAD
-				answers += match_first_letter  phone_number[0], dict
-=======
-				answers += dictionaryFirstWordMatch  phone_number[0], dict
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-			}
+			answers = match_letters phone_number, @@six_word, 0
+			answers = match_letters phone_number, answers, 1
+			answers = match_letters phone_number, answers, 2
+			answers = match_letters phone_number, answers, 3
+			answers = match_letters phone_number, answers, 4
+			answers = match_letters phone_number, answers, 5
 
 		when 7
-			@@seven_word.each { |dict|
-<<<<<<< HEAD
-				answers += match_first_letter  phone_number[0], dict
-=======
-				answers += dictionaryFirstWordMatch  phone_number[0], dict
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-			}
+			answers = match_letters phone_number, @@seven_word, 0
+			answers = match_letters phone_number, answers, 1
+			answers = match_letters phone_number, answers, 2
+			answers = match_letters phone_number, answers, 3
+			answers = match_letters phone_number, answers, 4
+			answers = match_letters phone_number, answers, 5
+			answers = match_letters phone_number, answers, 6
 
 		else
 			puts "error with switch statement"
 		end
-<<<<<<< HEAD
 			#dictionaryNextMatch answers, phone_number, amount
 			#puts answers.to_s
 		return answers
 	end 
 
-	def match_letter digit, place, word
+	def match_letters phonenumber, dictionary, place
 		answers = []
+		number = phonenumber[place]
 
-		@@numbers.fetch(digit).each { |key|
-			puts word
-			puts key
-			puts place
-		  if word[place] == key
-		  	answers << word
-		  	puts "true"
-		  else
-		  	puts "false"
-		  end
-		  puts ""
+		dictionary.each{ |dict|
+		 	puts "searching for " + dict
+		 	@@numbers.fetch(number).each { |key|
+		 	 puts key 
+		 	 	if key == dict[place]
+		 	 		answers.push(dict)
+		 	 	end
+		 	}
 		}
 		puts answers.to_s
 		return answers
 	end
-=======
-			#dictionary is loaded.  Find next matches
-			dictionaryNextMatch answers, phone_number, number_to_match
-
-		return answers
-	end 
-
-	def dictionaryFirstWordMatch digit, word
-		#input single digit(string), Lookup global number list. Validate first word , output array with valid word
-		answers =[]
-
-		@@numbers.fetch(digit).each { |first|  
-			if first == word[0]
-				answers.push(word)
-			end
-		}
-		return answers
-	end
-
-	def dictionaryNextMatch answers, phone_number, numbers_to_match
-		#Input array of valid answers,  validate the 2nd -> 7th characters, if no match, remove the answer from the answers arrray
-		
-		numbers_to_match.downto(2) { |number|
-			#first character has been identified already.  Start at 2.  .  Then removing one digit for array safety
-			number -= 1
-
-			answers.each { |answer|
-				isRemovable = true
-
-				@@numbers.fetch(phone_number[number]).each do |phone_character|
-					answer[number] == phone_character ? isRemovable = false : self
-				end
-
-				#remove from answers array if not found
-				isRemovable == true ? answers.delete(answer) : self
-			}
-		}
-	end
-
->>>>>>> 3976ee79dd799b7b77bcda1ac5fa24aebfb26cc7
-
-	def match_first_letter digit, word
-		answers = []
-
-		@@numbers.fetch(digit).each { |key| 
-			if key == word[0]
-				answers.push(word)
-			end
-		}
-		return answers
-	end
-
-	def match_next_letter digit, place, dict
-		#digit is the next number to match ["A", "B", "C"]
-		#place is where to match the letter
-		#dict is the word to match "hello"
-
-		#this method is called in a "delete_if" loop
-		#the word is deleted if this method returns true
-		@@numbers.fetch(digit).each{ |key|
-			if dict[place] == key
-				return false
-			else
-				return true
-			end
-		}
-	end
-
 end
 
 example = PhoneNumber.new
 #example.translatePhoneNum "4326398"
-example.search 4,"6398222"
-puts "639-8222"
+example.search 2,"2798222"
+puts "289-8222"
 # Examples:
 # ---------
 #1 letter
@@ -225,78 +126,3 @@ puts "639-8222"
 # new-sock == 639-7625
 # next == 639-8222
 # sock == 762-5222
-
-
-=begin
-	def dictionaryNextMatch answers, phone_number, amount
-		#Input array of valid answers,  validate the 2nd -> 7th characters, if no match, remove the answer from the answers arrray
-		
-		amount.downto(2) { |number|
-			#first character has been identified already.  Start at 2.  .  Then removing one digit for array safety
-			number -= 1
-
-			answers.each { |answer|
-				isRemovable = true
-
-				@@numbers.fetch(phone_number[number]).each do |phone_character|
-					answer[number] == phone_character ? isRemovable = false : self
-				end
-
-				#remove from answers array if not found
-				isRemovable == true ? answers.delete(answer) : self
-			}
-		}
-	end
-
-	def three_letters input
-		answers = []
-		#start by looping through the whole dictionary
-		@@three_word.each { |dict|
-			#test the first letter
-			input[0].each { |first|
-				if first == dict[0]
-					answers.push(dict)
-				end
-			}
-		}
-		answers.each { |dict|
-			#delete instead of add
-			input[1].select! { |second|
-				second == dict[1]
-			}
-		}
-		answers.each { |dict|
-			puts dict
-			input[2].select! { |third|
-				third == dict[2]
-			}
-		}
-
-		if answers.length == 0
-			puts "Sorry no answers match!"
-		else 
-			return answers
-		end
-	end
-
-	def find4Word input
-		d=input[0]
-		e=input[1]
-		f=input[2]
-		g=input[3]
-		four_word_result = []
-		d.each { |first| 
-			e.each { |second| 
-				f.each { |third| 
-					g.each { |fourth|
-						four_word_result += @@four_word.select { |num| 
-							num == first + second + third + fourth
-						}
-					}
-				}
-			}
-		}
-		return four_word_result
-	end
-end
-=end
