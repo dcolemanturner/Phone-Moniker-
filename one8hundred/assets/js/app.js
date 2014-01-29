@@ -1,8 +1,9 @@
 $(document).ready(function(){
 	$(".flip-num").find("button.up").on("click", function(event){
 		var thisInput = $(this).parent().find("input");
+		var value = thisInput[0].value;
 		thisInput[0].stepUp(1);
-		alert(thisInput);
+		
 	});
 	$(".flip-num").find("button.down").on("click", function(event){
 		var thisInput = $(this).parent().find("input");
