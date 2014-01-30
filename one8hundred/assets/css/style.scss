@@ -1,6 +1,4 @@
 /* Write your CSS! */
-$large: new-breakpoint(max-width 800px 7);
-
 @import "neat";
 $flip-height: 80px;
 $flip-font-size: 3em;
@@ -8,7 +6,7 @@ $font: 'Oswald', sans-serif;
 
 
 html {
-  height: 100%;
+  height: 1000px;
   background: #EBAA33;
   background: url('assets/img/splash1.JPG');
   background-size: cover;
@@ -18,17 +16,47 @@ html {
   @include outer-container;
   height: 100vh;
   font-family: $font;
-  color: white;
 
-  margin-top: 10px;
-  text-align: center; 
 
   h1{
     font-size: 4em;
+    color: white;
+    text-align: center; 
     padding-top: 100px;
   }
   p{
+    color: white;
+    text-align: center; 
     padding-bottom: 63px;
+  }
+  #range_input{
+    padding-bottom: 0px;
+    img{
+      @include span-columns(1 of 9);
+    }
+    input{
+      position: relative;
+      width: 83%;
+      left: 11%;
+      background: #444;
+      -webkit-appearance: none;
+    }
+    input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: #999;
+      width: 20px;
+      height: 30px;
+    }
+    output{
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      z-index: 100;
+      font-size: 26px;
+      color: white;
+      letter-spacing: 3px;
+
+    }
   }
   form{
     @include span-columns(10);
@@ -46,7 +74,25 @@ html {
       font-family: $font;
       color: #222;
       @include transform(rotate(90deg));
+    }
+  }
 
+  #results{
+    @include span-columns(9);
+    @include shift(2);
+
+    #first_result{
+      width: 34%;
+      background: green;
+      display: inline-block;
+      border-radius: 0px 0px 10px 10px;
+    }
+    #second_result{
+      position: relative;
+      display: inline-block;
+      width: 45%;
+      left: 14%;
+      background: red;
     }
   }
 }
@@ -58,6 +104,10 @@ html {
   border-right: 5px solid #666;
   border-left: 5px solid #444;
   border-top: 4px solid #777;
+
+  h2{
+    @include span-columns(1 of 9);
+  }
 }
 .flip-num:first-child{
   font-style: italic;
@@ -120,6 +170,9 @@ html {
   content: " ";
   display: block;
   margin: 1px auto;
+}
+#phone_popup{
+  position: absolute;
 }
 /* 
 Removes default up/down buttons
