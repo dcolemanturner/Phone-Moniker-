@@ -7,13 +7,13 @@ $(document).ready(function(){
 		output = slider.parent().find("output");
 		dif = 7-value;
 		output.css("letter-spacing", "3px");
-		output.css("font-size", "26px");
+		output.css("font-size", "22px");
 		output.css("left", "50%");
 		if (value == 7){
 			output.text("random");
 			output.css("letter-spacing", "1px");
 			output.css("left", "48%");
-			output.css("font-size", "26px");
+			output.css("font-size", "22px");
 		} else if(value < 7 && value > 0) {
 			output.text(value + "/" + dif);
 		} else if(value == 0){
