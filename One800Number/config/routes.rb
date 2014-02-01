@@ -1,4 +1,8 @@
 One800Number::Application.routes.draw do
+  get "phone_number/index"
+
+  get "phone_number/show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
