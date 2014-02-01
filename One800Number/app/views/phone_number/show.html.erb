@@ -1,2 +1,17 @@
-<h1>PhoneNumber#show</h1>
-<p>Find me in app/views/phone_number/show.html.erb</p>
+<h1>1-800 Names! America's #1 Phone Number Name Lookup!</h1>
+
+First Words: 
+<ul>
+<% @first_word.each do |word| %>
+	<li><%= word %>
+<% end %>
+</ul>
+
+Second Words
+<ul>
+<% @second_word.each do |word| %>
+	<li><%= word %>
+<% end %>
+</ul>
+
+<%= link_to 'Go Home', home_path %>

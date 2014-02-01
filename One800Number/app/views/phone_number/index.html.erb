@@ -1,2 +1,10 @@
-<h1>PhoneNumber#index</h1>
-<p>Find me in app/views/phone_number/index.html.erb</p>
+<h1>1-800 Numbers: America's #1 Phone Number Name Lookup!</h1>
+
+
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:phone_number, "Phone Number:") %>
+  <%= telephone_field(:phone_number, :number) %>
+  <%= submit_tag("Search") %>
+<% end %>
+

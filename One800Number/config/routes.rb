@@ -1,8 +1,8 @@
 One800Number::Application.routes.draw do
   
-  root "phone_number#index"
+  root to: "phone_number#index", as: :home
 
-  get "phone_number/show"
+  get '/search', to:  "phone_number#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
