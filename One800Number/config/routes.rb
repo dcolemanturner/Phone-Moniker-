@@ -1,5 +1,6 @@
 One800Number::Application.routes.draw do
-  get "phone_number/index"
+  
+  root "phone_number#index"
 
   get "phone_number/show"
 
