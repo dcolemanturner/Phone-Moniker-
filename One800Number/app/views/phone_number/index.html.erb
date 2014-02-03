@@ -1,0 +1,10 @@
+<h1>1-800 Numbers: America's #1 Phone Number Name Lookup!</h1>
+
+
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:phone_number, "Phone Number:") %>
+  <%= telephone_field(:phone_number, :number) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
