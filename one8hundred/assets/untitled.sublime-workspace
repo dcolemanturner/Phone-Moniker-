@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"webkit",
+				"webkit-appearance"
+			],
+			[
 				"font",
 				"font-size"
 			],
@@ -307,7 +315,7 @@
 			"file": "css/style.scss",
 			"settings":
 			{
-				"buffer_size": 2854,
+				"buffer_size": 3736,
 				"line_ending": "Unix"
 			}
 		},
@@ -315,7 +323,7 @@
 			"file": "/Users/jailbot/Documents/ruby/one8hundred/index.html",
 			"settings":
 			{
-				"buffer_size": 2384,
+				"buffer_size": 2561,
 				"line_ending": "Unix"
 			}
 		},
@@ -323,7 +331,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 363,
+				"buffer_size": 924,
 				"line_ending": "Unix"
 			}
 		}
@@ -478,7 +486,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -487,15 +495,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2854,
+						"buffer_size": 3736,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								523,
-								523
+								970,
+								970
 							]
 						],
 						"settings":
@@ -505,7 +513,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 424.0,
+						"translation.y": 616.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -517,15 +525,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2384,
+						"buffer_size": 2561,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								190,
-								190
+								203,
+								203
 							]
 						],
 						"settings":
@@ -534,10 +542,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1143.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -546,26 +554,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 363,
+						"buffer_size": 924,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								202,
-								202
+								311,
+								311
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
+						"translation.x": 7.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
