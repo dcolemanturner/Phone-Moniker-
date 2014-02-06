@@ -2,7 +2,9 @@
 
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:phone_number, "Phone Number:") %>
-  <%= telephone_field(:phone_number, :number) %>
+  <%= telephone_field(:number, :phone_number) %>
+  <%= label_tag(:word_size, "Word Size:") %>
+  <%= number_field(:number, :size) %>
   <%= submit_tag("Search") %>
 <% end %>
 

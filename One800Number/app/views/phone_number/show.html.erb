@@ -1,17 +1,16 @@
 <h1>1-800 Names! America's #1 Phone Number Name Lookup!</h1>
 
-First Words: 
+<h2>First Words: </h2>
 <ul>
-<% @first_word.each do |word| %>
+<% @first_answers.each do |word| %>
 	<li><%= word %>
 <% end %>
 </ul>
 
-Second Words:
+<h2>Second Words: </h2>
 <ul>
-<% @second_word.each do |word| %>
+<% @second_answers.each do |word| %>
 	<li><%= word %>
 <% end %>
 </ul>
-
 <%= link_to 'Go Home', home_path %>
