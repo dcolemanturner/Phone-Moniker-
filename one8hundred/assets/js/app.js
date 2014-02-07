@@ -50,7 +50,7 @@ $(document).ready(function(){
 			});
 		} else if(value == 0){
 			first_result_title.text("All results:");
-			second_result_title.text("");
+			second_result_title.text("All results:");
 			first_result.animate({width: "0%"}, speed);
 			second_result.animate({width: "94%"}, speed);
 		}
@@ -65,7 +65,6 @@ $(document).ready(function(){
 			thisInput.value = "2";
 		}
 		thisInput[0].stepUp(1);
-		alert(value);
 	});
 	$(".flip-num").find("button.down").on("click", function(event){
 		var thisInput = $(this).parent().find("input");

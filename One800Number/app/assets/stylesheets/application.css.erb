@@ -1,0 +1,221 @@
+-/*
+- * This is a manifest file that'll be compiled into application.css, which will include all the files
+- * listed below.
+- *
+- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+- *
+- * You're free to add application-wide styles to this file and they'll appear at the top of the
+- * compiled file, but it's generally better to create a new file per style scope.
+- *
+- *= require_self
+- *= require_tree .
+- */
+
+/* Write your CSS! */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  background: #EBAA33;
+  background: url(<%= asset_path 'splash1.JPG' %>);
+  background-size: cover; }
+
+#main {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Oswald", sans-serif;
+  padding-top: 100px; }
+  #main:after {
+    content: "";
+    display: table;
+    clear: both; }
+  #main h1 {
+    color: white;
+    font-size: 4em;
+    text-align: center;
+    text-shadow: black 0px 3px 1px; }
+  #main p {
+    color: #eee;
+    padding-bottom: 40px;
+    text-align: center;
+    text-shadow: black 0px 2px 1px; }
+  #main #range_input {
+    padding-top: 0px;
+    position: relative; }
+    #main #range_input input {
+      -webkit-appearance: none;
+      position: relative;
+      width: 85%;
+      left: 10%;
+      background: #444; }
+    #main #range_input input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background: #999;
+      width: 5%;
+      height: 25px; }
+  #main form {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
+    padding: 2.35765%;
+    background: #eee; }
+    #main form:last-child {
+      margin-right: 0; }
+    #main form h3 {
+      float: left;
+      display: block;
+      margin-right: 3.16844%;
+      width: 8.29472%;
+      text-align: left;
+      font-size: 24px;
+      position: relative;
+      top: 25px;
+      margin: 0px;
+      font-family: "Oswald", sans-serif;
+      color: #222;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg); }
+      #main form h3:last-child {
+        margin-right: 0; }
+  #main #results {
+    float: right;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-left: 17.05961%; }
+    #main #results:last-child {
+      margin-right: 0; }
+    #main #results div {
+      display: inline-block;
+      border-radius: 0px 0px 10px 10px; }
+      #main #results div h3 {
+        height: 40px;
+        font-size: 26px;
+        margin: 10px; }
+    #main #results .first_result {
+      background: green;
+      width: 0%; }
+    #main #results .second_result {
+      background: red;
+      width: 94%; }
+
+.flip-num {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 8.29472%;
+  font-family: "Oswald", sans-serif;
+  border-radius: 10px;
+  border: 4px solid #333;
+  border-right: 5px solid #666;
+  border-left: 5px solid #444;
+  border-top: 4px solid #777; }
+  .flip-num:last-child {
+    margin-right: 0; }
+  .flip-num h2 {
+    float: left;
+    display: block;
+    margin-right: 3.16844%;
+    width: 8.29472%; }
+    .flip-num h2:last-child {
+      margin-right: 0; }
+
+.flip-num:first-child {
+  font-style: italic; }
+
+.up {
+  top: 0;
+  border-radius: 5px 5px 0px 0px; }
+
+.down {
+  bottom: 0;
+  border-radius: 0 0 5px 5px; }
+
+/* uses "after" psudo element to create
+"up arrow" and "down arrow" */
+.up:after {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 7.5px;
+  border-bottom-color: gray; }
+
+.down:after {
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 7.5px;
+  border-top-color: gray; }
+
+/* flip height
+--------------
+4px border : top and bottom
+8px
+---
+10px arrows : top and bottom
+20px
+----
+2px margin : for the arrows
+4px
+===
+32px total
+*/
+.flip-num input {
+  position: relative;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  height: 80px;
+  text-align: center;
+  background: #222;
+  padding: 0px;
+  border: 2px inset #444;
+  color: white;
+  width: 100%; }
+
+.flip-num button {
+  position: relative;
+  background: #ddd;
+  width: 100%; }
+
+.flip-num button:focus,
+.flip-num input:focus {
+  outline: none; }
+
+.flip-num button:after {
+  content: " ";
+  display: block;
+  margin: 1px auto; }
+
+#phone_popup {
+  position: absolute; }
+/* 
+Removes default up/down buttons
+http://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-inputs-spin-box
+(chrome/safari support only)
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles for mobile */ }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles for tablet */ }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  /* Don't forget your Retina CSS! */
+  body {
+    background-size: 72px 72px; } }

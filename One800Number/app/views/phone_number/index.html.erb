@@ -1,5 +1,5 @@
-<h1>1-800 Numbers: America's #1 Phone Number Name Lookup!</h1>
 
+<!-- 
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:phone_number, "Phone Number:") %>
   <%= telephone_field(:number, :phone_number) %>
@@ -7,4 +7,70 @@
   <%= number_field(:number, :size) %>
   <%= submit_tag("Search") %>
 <% end %>
+-->
+<!-- @include _header -->
 
+  <section id="main">
+  <h1>one8hundred.com</h1>
+  <p>Find out the best phrases to replace your boring toll free number!</p>
+
+    <form id="phone_input" method="get">
+    		<h3>1-800</h3>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <input type="number" max="9" min="2" placeholder="2" tabindex="1"></input>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <input type="number" max="9" min="2" placeholder="2" tabindex="2"></input>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <input type="number" max="9" min="2" placeholder="2" tabindex="3"></input>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" disabled type="button"></button>
+		    <input type="number" max="9" min="2" value="-" placeholder="-" disabled tabindex="4"></input>
+		    <button class="down" name="down" disabled type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <input type="number" max="9" min="2" placeholder="2" tabindex="4"></input>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <input type="number" max="9" min="2" placeholder="2" tabindex="5"></input>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <input type="number" max="9" min="2" placeholder="2" tabindex="6"></input>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <input type="number" max="9" min="2" placeholder="2" tabindex="7"></input>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		</form>
+	  <form id="range_input" method="get">
+
+			<input type="range" name="foo" min="0" max="7" value="0">
+	  </form>
+		<div id="results">
+			<div class="first_result">
+				<h3>Title:</h3>
+				<p>Example</p>
+			</div>
+			<div class="second_result">
+			<h3>All Results:</h3>
+				<p>Dumb</p>
+			</div>
+		</div>
+  </section>
+  
+<!-- @include _footer -->

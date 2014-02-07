@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"da",
+				"da_size"
+			],
+			[
 				"anim",
 				"anim_speed"
 			],
@@ -360,18 +364,10 @@
 	"buffers":
 	[
 		{
-			"file": "css/style.scss",
-			"settings":
-			{
-				"buffer_size": 3614,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/Users/jailbot/Documents/ruby/one8hundred/index.html",
 			"settings":
 			{
-				"buffer_size": 2529,
+				"buffer_size": 2535,
 				"line_ending": "Unix"
 			}
 		},
@@ -379,7 +375,7 @@
 			"file": "js/app.js",
 			"settings":
 			{
-				"buffer_size": 2551,
+				"buffer_size": 2547,
 				"line_ending": "Unix"
 			}
 		}
@@ -437,7 +433,11 @@
 	"file_history":
 	[
 		"/Users/jailbot/Documents/ruby/One800Number/app/controllers/phone_number_controller.rb",
+		"/Users/jailbot/Documents/ruby/One800Number/app/models/phone_number.rb",
 		"/Users/jailbot/Documents/ruby/One800Number/app/views/phone_number/show.html.erb",
+		"/Users/jailbot/Documents/ruby/one8hundred/assets/js/app.js",
+		"/Users/jailbot/Documents/ruby/one8hundred/assets/css/style.scss",
+		"/Users/jailbot/Documents/ruby/one8hundred/index.html",
 		"/Users/jailbot/Documents/ruby/One800Number/app/views/phone_number/index.html.erb",
 		"/Users/jailbot/Documents/ruby/One800Number/app/helpers/application_helper.rb",
 		"/Users/jailbot/Documents/ruby/One800Number/app/controllers/application_controller.rb",
@@ -546,49 +546,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "css/style.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3614,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1606,
-								1606
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1191.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/Users/jailbot/Documents/ruby/one8hundred/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2529,
+						"buffer_size": 2535,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2392,
-								2378
+								2452,
+								2452
 							]
 						],
 						"settings":
@@ -597,27 +567,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 932.0,
+						"translation.y": 949.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "js/app.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2551,
+						"buffer_size": 2547,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								403,
-								403
+								2045,
+								2045
 							]
 						],
 						"settings":
@@ -626,10 +596,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 579.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -711,7 +681,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 69.0,
+	"side_bar_width": 143.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
