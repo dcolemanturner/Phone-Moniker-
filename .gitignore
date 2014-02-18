@@ -1,0 +1,14 @@
+
+blog/app/views/welcome/index.html.erb
+
+blog/app/views/posts/new.html.erb
+
+blog/app/views/posts/index.html.erb
+
+blog/app/views/posts/show.html.erb
+
+blog/bin/bundle
+
+blog/bin/rails
+
+blog/bin/rake

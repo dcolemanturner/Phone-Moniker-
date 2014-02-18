@@ -6,7 +6,6 @@ $font: 'Oswald', sans-serif;
 
 
 html {
-  height: 1000px;
   background: #EBAA33;
   background: url('assets/img/splash1.JPG');
   background-size: cover;
@@ -14,47 +13,39 @@ html {
 
 #main {
   @include outer-container;
-  height: 100vh;
   font-family: $font;
-
+  padding-top: 100px;
+  
 
   h1{
-    font-size: 4em;
     color: white;
-    text-align: center; 
-    padding-top: 100px;
+    font-size: 4em;
+    text-align: center;
+    text-shadow: black 0px 3px 1px;
   }
   p{
-    color: white;
+    color: #eee;
+    padding-bottom: 40px;
     text-align: center; 
-    padding-bottom: 63px;
+    text-shadow: black 0px 2px 1px;
   }
+
   #range_input{
-    padding-bottom: 0px;
-    img{
-      @include span-columns(1 of 9);
-    }
+    padding-top: 0px;
+    position: relative;
     input{
-      position: relative;
-      width: 83%;
-      left: 11%;
-      background: #444;
       -webkit-appearance: none;
+      position: relative;
+      width: 85%;
+      left: 10%;
+      background: #444;
+      
     }
     input::-webkit-slider-thumb {
       -webkit-appearance: none;
       background: #999;
-      width: 20px;
-      height: 30px;
-    }
-    output{
-      display: inline-block;
-      position: absolute;
-      left: 50%;
-      z-index: 100;
-      font-size: 22px;
-      color: white;
-      letter-spacing: 3px;
+      width: 5%;
+      height: 25px;
 
     }
   }
@@ -78,21 +69,27 @@ html {
   }
 
   #results{
+    float: right;
     @include span-columns(9);
     @include shift(2);
 
-    #first_result{
-      width: 34%;
-      background: green;
+    div{
       display: inline-block;
       border-radius: 0px 0px 10px 10px;
+
+      h3{
+        height: 40px;
+        font-size: 26px;
+        margin: 10px;
+      }
     }
-    #second_result{
-      position: relative;
-      display: inline-block;
-      width: 45%;
-      left: 14%;
+    .first_result{
+      background: green;
+      width: 0%;
+    }
+    .second_result{
       background: red;
+      width: 94%;
     }
   }
 }

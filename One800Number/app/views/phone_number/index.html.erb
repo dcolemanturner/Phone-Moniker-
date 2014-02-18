@@ -1,10 +1,68 @@
-<h1>1-800 Numbers: America's #1 Phone Number Name Lookup!</h1>
 
+  <section id="main">
+  <div id="hero">
+	  <h1>one8hundred.com</h1>
+	  <p>Find out the best phrases to replace your boring toll free number!</p>
+  </div>
+	<div class="clear">
+		<h3>1 800</h3>
+	</div>
 
+    <%= form_tag('/search', method: 'post', id: "number_input") do |num|%>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <%= number_field_tag('a', 3, in: 2...10, tabindex: 1) %>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <%= number_field_tag('b', 6, in: 2...10, tabindex: 2, placeholder: 2) %>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <%= number_field_tag('c', 2, in: 2...10, tabindex: 3, placeholder: 2) %>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" disabled type="button"></button>
+		    <input type="number" max="9" min="2" value="-" placeholder="-" disabled tabindex="4"></input>
+		    <button class="down" name="down" disabled type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <%= number_field_tag('d', 5, in: 2...10, tabindex: 4, placeholder: 2) %>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <%= number_field_tag('e', 3, in: 2...10, tabindex: 5) %>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <%= number_field_tag('f', 6, in: 2...10, tabindex: 6) %>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+		  <div class="flip-num">
+		    <button class="up" name="up" type="button"></button>
+		    <%= number_field_tag('g', 5, in: 2...10, tabindex: 7, placeholder: 2) %>
+		    <button class="down" name="down" type="button"></button>
+		  </div>
+			<%= submit_tag "Check Number", id: 'number_submit' %>
+			<input id="range_input" type="range" name="foo" min="0" max="7" value="0">
 
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag(:phone_number, "Phone Number:") %>
-  <%= telephone_field(:phone_number, :number) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
+		<% end %>
+		<div id="results">
+			<div class="first_result">
+				<h3>&nbsp;</h3>
+				<p></p>
+			</div>
+			<div class="second_result">
+			<h3>All Results:</h3>
+				<p></p>
+			</div>
+		</div>
+  </section>
+  
+<!-- @include _footer -->

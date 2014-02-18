@@ -4,6 +4,10 @@
 		{
 			"follow_symlinks": true,
 			"path": "/Users/jailbot/Documents/ruby/one8hundred"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/jailbot/Documents/ruby/One800Number"
 		}
 	]
 }
