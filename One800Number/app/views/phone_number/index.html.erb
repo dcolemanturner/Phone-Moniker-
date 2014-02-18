@@ -8,20 +8,21 @@
 		<h3>1 800</h3>
 	</div>
 
-    <%= form_tag('/search', method: 'post', id: "number_input") do |num|%>
+
+    <%= form_tag('/search', method: 'post', id: "number_input", remote: true) do |num|%>
 		  <div class="flip-num">
 		    <button class="up" name="up" type="button"></button>
-		    <%= number_field_tag('a', 3, in: 2...10, tabindex: 1) %>
+		    <%= number_field_tag('a', 8, in: 2...10, tabindex: 1) %>
 		    <button class="down" name="down" type="button"></button>
 		  </div>
 		  <div class="flip-num">
 		    <button class="up" name="up" type="button"></button>
-		    <%= number_field_tag('b', 6, in: 2...10, tabindex: 2, placeholder: 2) %>
+		    <%= number_field_tag('b', 4, in: 2...10, tabindex: 2) %>
 		    <button class="down" name="down" type="button"></button>
 		  </div>
 		  <div class="flip-num">
 		    <button class="up" name="up" type="button"></button>
-		    <%= number_field_tag('c', 2, in: 2...10, tabindex: 3, placeholder: 2) %>
+		    <%= number_field_tag('c', 3, in: 2...10, tabindex: 3) %>
 		    <button class="down" name="down" type="button"></button>
 		  </div>
 		  <div class="flip-num">
@@ -31,7 +32,7 @@
 		  </div>
 		  <div class="flip-num">
 		    <button class="up" name="up" type="button"></button>
-		    <%= number_field_tag('d', 5, in: 2...10, tabindex: 4, placeholder: 2) %>
+		    <%= number_field_tag('d', 6, in: 2...10, tabindex: 4) %>
 		    <button class="down" name="down" type="button"></button>
 		  </div>
 		  <div class="flip-num">
@@ -41,12 +42,12 @@
 		  </div>
 		  <div class="flip-num">
 		    <button class="up" name="up" type="button"></button>
-		    <%= number_field_tag('f', 6, in: 2...10, tabindex: 6) %>
+		    <%= number_field_tag('f', 9, in: 2...10, tabindex: 6) %>
 		    <button class="down" name="down" type="button"></button>
 		  </div>
 		  <div class="flip-num">
 		    <button class="up" name="up" type="button"></button>
-		    <%= number_field_tag('g', 5, in: 2...10, tabindex: 7, placeholder: 2) %>
+		    <%= number_field_tag('g', 8, in: 2...10, tabindex: 7) %>
 		    <button class="down" name="down" type="button"></button>
 		  </div>
 			<%= submit_tag "Check Number", id: 'number_submit' %>
