@@ -2,11 +2,12 @@ One800Number::Application.routes.draw do
   
   root to: "phone_number#index", as: :home
 
-  get '/search', to:  "phone_number#show"
+  post '/search', to:  "phone_number#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  resource :phone_number
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

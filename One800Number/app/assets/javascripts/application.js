@@ -26,7 +26,8 @@ $(document).ready(function(){
 		var first_result_title = first_result.find("h3");
 		var second_result = $("#results .second_result");
 		var second_result_title = second_result.find("h3");
-		var speed = 130;
+		var speed = 300;
+		var easing = 'easeOutBack';
 
 		if (value == 7){
 			first_result_title.text("Seven letters:");
@@ -35,10 +36,9 @@ $(document).ready(function(){
 			second_result.animate({width: "0%"}, speed);
 		} else if(value == 6) {
 			first_result_title.text("Six letters:");
-			first_result.animate({width: "77%"}, speed);
-			second_result.animate({width: "17%"}, speed, "swing", function(){
-				second_result_title.text("One letter:");
-			});
+			first_result.animate({width: "78%"}, speed);
+			second_result.animate({width: "16%"}, speed);
+			second_result_title.text("One letter:");
 		} else if(value == 5) {
 			first_result_title.text("Five letters:");
 			second_result_title.text("Two letters:");
@@ -52,24 +52,32 @@ $(document).ready(function(){
 		} else if(value == 3) {
 			first_result_title.text("Three letters:");
 			second_result_title.text("Four letters:");
-			first_result.animate({width: "41%"}, speed);
-			second_result.animate({width: "53%"}, speed);
+			first_result.animate({width: "41%"}, speed, easing);
+			second_result.animate({width: "53%"}, speed, easing);
 		} else if(value == 2) {
-			first_result_title.text("Two letters:");
 			second_result_title.text("Five letters:");
-			first_result.animate({width: "29%"}, speed);
-			second_result.animate({width: "65%"}, speed);
+			first_result.animate({width: "28%"}, speed, easing, function(){
+				first_result_title.text("Two letters:");
+			});
+			second_result.animate({width: "66%"}, speed, easing);
 		} else if(value == 1) {
 			second_result_title.text("Six letters:");
-			second_result.animate({width: "77%"}, speed);
-			first_result.animate({width: "17%"}, speed, "swing", function(){
+			second_result.animate({width: "78%"}, speed, easing);
+			first_result.animate({width: "16%"}, speed, easing, function(){
 				first_result_title.text("One letter:");
 			});
+			first_result.css("display", "inline-block");
+			first_result.css("margin-left", "3%");
+			second_result.css("margin-left", '0%');
+			
 		} else if(value == 0){
-			first_result_title.text("All results:");
+			first_result_title.html("<h3>&nbsp;</h3>");
 			second_result_title.text("All results:");
-			first_result.animate({width: "0%"}, speed);
-			second_result.animate({width: "94%"}, speed);
+			first_result.animate({width: "0%"}, speed, easing, function(){
+				first_result.css("display", "none");
+				second_result.css("margin-left", '3%');
+			});
+			second_result.animate({width: "94%"}, speed, easing);
 		}
 	});
 
