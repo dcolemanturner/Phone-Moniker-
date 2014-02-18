@@ -76,33 +76,33 @@ class PhoneNumber
 			second_answers = match_letters 6, phone_number, second_answers, 2
 
 		when 5
-			first_answers = 0, match_letters, phone_number, @@five_word, 0
-			first_answers = 1, match_letters, phone_number, first_answers, 1
-			first_answers = 2, match_letters, phone_number, first_answers, 2
-			first_answers = 3, match_letters, phone_number, first_answers, 3
-			first_answers = 4, match_letters, phone_number, first_answers, 4
+			first_answers = match_letters 0, phone_number, @@five_word, 0
+			first_answers = match_letters 1, phone_number, first_answers, 1
+			first_answers = match_letters 2, phone_number, first_answers, 2
+			first_answers = match_letters 3, phone_number, first_answers, 3
+			first_answers = match_letters 4, phone_number, first_answers, 4
 
-			second_answers = 5, match_letters, phone_number, @@two_word, 0
-			second_answers = 6, match_letters, phone_number, second_answers, 1
+			second_answers = match_letters 5, phone_number, @@two_word, 0
+			second_answers = match_letters 6, phone_number, second_answers, 1
 		
 		when 6
-			first_answers = 0, match_letters, phone_number, @@six_word, 0
-			first_answers = 1, match_letters, phone_number, first_answers, 1
-			first_answers = 2, match_letters, phone_number, first_answers, 2
-			first_answers = 3, match_letters, phone_number, first_answers, 3
-			first_answers = 4, match_letters, phone_number, first_answers, 4
-			first_answers = 5, match_letters, phone_number, first_answers, 5
+			first_answers = match_letters 0, phone_number, @@six_word, 0
+			first_answers = match_letters 1, phone_number, first_answers, 1
+			first_answers = match_letters 2, phone_number, first_answers, 2
+			first_answers = match_letters 3, phone_number, first_answers, 3
+			first_answers = match_letters 4, phone_number, first_answers, 4
+			first_answers = match_letters 5, phone_number, first_answers, 5
 
-			second_answers = 6, match_letters, phone_number, @@one_word, 0
+			second_answers = match_letters 6, phone_number, @@one_word, 0
 
 		when 7
-			first_answers = 0, match_letters, phone_number, @@seven_word, 0
-			first_answers = 1, match_letters, phone_number, first_answers, 1
-			first_answers = 2, match_letters, phone_number, first_answers, 2
-			first_answers = 3, match_letters, phone_number, first_answers, 3
-			first_answers = 4, match_letters, phone_number, first_answers, 4
-			first_answers = 5, match_letters, phone_number, first_answers, 5
-			first_answers = 6, match_letters, phone_number, first_answers, 6
+			first_answers = match_letters 0, phone_number, @@seven_word, 0
+			first_answers = match_letters 1, phone_number, first_answers, 1
+			first_answers = match_letters 2, phone_number, first_answers, 2
+			first_answers = match_letters 3, phone_number, first_answers, 3
+			first_answers = match_letters 4, phone_number, first_answers, 4
+			first_answers = match_letters 5, phone_number, first_answers, 5
+			first_answers = match_letters 6, phone_number, first_answers, 6
 
 		else
 			puts "error with switch statement"
